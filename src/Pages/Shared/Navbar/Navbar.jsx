@@ -1,19 +1,19 @@
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import { useContext } from "react";
-// import { AuthContext } from "../../../components/AuthProvider/AuthProvider";
+import { useContext } from "react";
+import { AuthContext } from "../../../components/AuthProvider/AuthProvider";
 
 const Navbar = () => {
-  // const {user,logoutUser,reload} = useContext(AuthContext);
-  // console.log(user);
+  const {user,logoutUser,reload} = useContext(AuthContext);
+  console.log(user);
 
-  // const handleLogOut = () =>{
+  const handleLogOut = () =>{
 
-  //   logoutUser()
-  //   .then()
-  //   .catch()
+    logoutUser()
+    .then()
+    .catch()
 
-  // }
+  }
   return (
     <div className=" bg-[#F2DAAC]">
     <div className="navbar lg:max-w-[85%] mx-auto">
@@ -50,14 +50,14 @@ const Navbar = () => {
               <NavLink to={"/agents"}>Agents</NavLink>
             </li>
 
-            {/* {
+            {
               user && (reload || user.photoURL) ? 
               <li onClick={handleLogOut}>
               Logout</li>
               :
               <li><Link to={"/login"}>Sign In</Link></li>
               
-            } */}
+            }
           
           </ul>
         </div>
@@ -71,13 +71,15 @@ const Navbar = () => {
         <li>
         <NavLink to={"/queries"}>Queries</NavLink>
         </li>
-        <li>
-              <NavLink to={"/agents"}>Agents</NavLink>
-        </li>
+        {user && (reload || user.photoURL) ? <li><NavLink to={"/recommendationsforme"}>Recommendations For Me</NavLink></li> : ""}
+
+        {user && (reload || user.photoURL) ? <li><NavLink to={"/myqueries"}>My Queries</NavLink></li> : ""}
+
+        {user && (reload || user.photoURL) ? <li><NavLink to={"/myrecommendations"}>My Recommendations</NavLink></li> : ""}
         </ul>
       </div>
       <div className="navbar-end gap-4">
-      {/* {
+      {
         user && (reload || user.photoURL) ? 
         <div className="flex items-center gap-2">
         <div className="tooltip tooltip-left cursor-pointer avatar" data-tip={user.displayName}>
@@ -85,12 +87,12 @@ const Navbar = () => {
           <img alt="user photo" src={user.photoURL} />
         </div>
       </div>
-        <button onClick={handleLogOut} className="btn btn-neutral text-white text-lg hidden lg:flex">Logout</button>
+        <button onClick={handleLogOut} className="btn btn-outline  outline-[#023373] text-lg hidden lg:flex">Logout</button>
         </div>
         :
-        <Link to={"/login"} className="btn btn-outline btn-success text-white text-lg">Sign In</Link>
+        <Link to={"/login"} className="btn btn-outline  outline-[#023373]  text-lg">Sign In</Link>
 
-      }   */}
+      }  
       </div>
 
     </div>
