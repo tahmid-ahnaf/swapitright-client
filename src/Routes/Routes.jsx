@@ -6,6 +6,8 @@ import Login from "../Pages/Login/Login";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import MyQueries from "../Pages/MyQueries/MyQueries";
+import AddQueries from "../Pages/AddQueries/AddQueries";
+import UpdateQuery from "../Pages/UpdateQuery/UpdateQuery";
 
 
 const router = createBrowserRouter([
@@ -31,16 +33,16 @@ const router = createBrowserRouter([
         element:<PrivateRoutes><MyQueries></MyQueries></PrivateRoutes>,
     },
 
-  //       {
-  //         path:"/additems",
-  //         element:<PrivateRoutes><AddItems></AddItems></PrivateRoutes>,
-  //     },
+        {
+          path:"/addqueries",
+          element:<PrivateRoutes><AddQueries></AddQueries></PrivateRoutes>,
+      },
 
-  //     {
-  //       path:"/updateitem/:id",
-  //       element:<PrivateRoutes><UpdateItem></UpdateItem></PrivateRoutes>,
-  //       loader: ({params}) => fetch(`https://b9a10-server-side-tahmid-ahnaf.vercel.app/items/${params.id}`)
-  //   },
+      {
+        path:"/updatequery/:id",
+        element:<PrivateRoutes><UpdateQuery></UpdateQuery></PrivateRoutes>,
+        loader: ({params}) => fetch(`http://127.0.0.1:5000/queries/${params.id}`)
+    },
 
   //     {
   //       path:"/view-details/:id",

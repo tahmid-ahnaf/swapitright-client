@@ -68,35 +68,35 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
   return (
     <div>
       <div className="card h-min md:h-[400px] md:card-side bg-[#EBD4AE]  shadow-xl">
-        <figure className="w-full md:w-[50%]">
+        <figure className="w-[50%]">
           <img
             src={productImageURL}
             alt="Album"
-            className="bg-cover w-full h-[300px] md:h-full"
+            className="bg-contain w-full h-[200px] md:h-full"
           />
         </figure>
         <div className="card-body text-xl text-[#023373] font-medium">
           <p className="flex items-center gap-2">
-            <MdQueryStats></MdQueryStats> {queryTitle}
+            <MdQueryStats className="text-2xl"></MdQueryStats> {queryTitle}
           </p>
           <p className="flex items-center gap-2">
-            <AiOutlineProduct></AiOutlineProduct>
+            <AiOutlineProduct className="text-2xl"></AiOutlineProduct>
             {productName}
           </p>
           <p className="flex items-center gap-2">
-            <TbBrandAsana></TbBrandAsana>
+            <TbBrandAsana className="text-2xl"></TbBrandAsana>
             {productBrand}
           </p>
           <p className="flex items-center gap-2">
-            <BiCommentX></BiCommentX>
+            <BiCommentX className="text-2xl"></BiCommentX>
             {alternationReason}
           </p>
           <p className="flex items-center gap-2">
-            <FaRegCalendarAlt></FaRegCalendarAlt>
+            <FaRegCalendarAlt className="text-2xl"></FaRegCalendarAlt>
             {dateTimeString}
           </p>
           <p className="flex items-center gap-2">
-            <FaRegUser></FaRegUser>
+            <FaRegUser className="text-2xl"></FaRegUser>
             {userName}
           </p>
           <div className="mt-4 card-actions justify-center md:justify-start">
@@ -132,8 +132,9 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
                     <p className="md:hidden text-4xl"><MdDeleteOutline></MdDeleteOutline></p>
                   </div>
                 );
-              } else {
-                return <p>Please log in.</p>;
+              } 
+              else if(from==="home") {
+                return "";
               }
             })()}
           </div>

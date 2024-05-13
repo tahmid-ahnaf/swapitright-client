@@ -15,7 +15,7 @@ const RecentQueries = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 max-w-[85%] mx-auto gap-4">
             {data.map((query) => (
-                <QueryCard key={query._id} query={query}></QueryCard>
+                <QueryCard from="home" key={query._id} query={query}></QueryCard>
             ))}
         </div>
             
