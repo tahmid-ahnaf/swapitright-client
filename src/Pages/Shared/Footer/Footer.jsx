@@ -1,14 +1,38 @@
 const Footer = () => {
     return (
-        <div>
+        <div className="bg-[#F5EAD8]">
 <footer
-  className="flex flex-col items-center bg-zinc-50 text-center text-surface mt-8">
+  className="flex flex-col items-center text-center text-surface">
   <div className="max-w-[85%] mx-auto px-6 pt-6">
-    <div className="mb-6 flex justify-center space-x-2">
+
+    <div className="mb-6 grid md:grid-cols-3 mt-12 items-center justify-center gap-x-40">
+
+      <div className="mb-6">
+        <h5 className="mb-4 font-bold text-3xl uppercase">Quick Links</h5>
+
+        <ul className="mb-6 gap-4 flex flex-col md:flex-row justify-center">
+          <li>
+            <a href="#!">Home</a>
+          </li>
+          <li>
+            <a href="#!">Queries</a>
+          </li>
+          <li>
+            <a href="#!">My Recommendations</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="mb-6 md:mb-0 flex flex-col gap-4">
+        <h2 className="font-bold font-lilita text-5xl text-[#023373]">SwapItRight</h2>  
+
+        <p className="">Follow Us On:</p>
+        
+        <div className="mb-6 flex justify-center space-x-2">
       <a
         href="#!"
         type="button"
-        className="rounded-full bg-white p-3 uppercase leading-normal text-surface shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:bg-neutral-700 dark:text-white"
+        className="rounded-full bg-[#023373] text-white p-3 uppercase  text-surface "
         data-twe-ripple-init
         data-twe-ripple-color="light">
         <span className="[&>svg]:h-5 [&>svg]:w-5">
@@ -25,7 +49,7 @@ const Footer = () => {
       <a
         href="#!"
         type="button"
-        className="rounded-full bg-white p-3 uppercase leading-normal text-surface shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:bg-neutral-700 dark:text-white"
+        className="rounded-full p-3 uppercase bg-[#023373] text-white text-surface "
         data-twe-ripple-init
         data-twe-ripple-color="light">
         <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -42,7 +66,7 @@ const Footer = () => {
       <a
         href="#!"
         type="button"
-        className="rounded-full bg-white p-3 uppercase leading-normal text-surface shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:bg-neutral-700 dark:text-white"
+        className="rounded-full p-3 uppercase bg-[#023373] text-white text-surface "
         data-twe-ripple-init
         data-twe-ripple-color="light">
         <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -59,7 +83,7 @@ const Footer = () => {
       <a
         href="#!"
         type="button"
-        className="rounded-full bg-white p-3 uppercase leading-normal text-surface shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:bg-neutral-700 dark:text-white"
+        className="rounded-full p-3 uppercase bg-[#023373] text-white text-surface "
         data-twe-ripple-init
         data-twe-ripple-color="light">
         <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -76,7 +100,7 @@ const Footer = () => {
       <a
         href="#!"
         type="button"
-        className="rounded-full bg-white p-3 uppercase leading-normal text-surface shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:bg-neutral-700 dark:text-white"
+        className="rounded-full p-3 uppercase bg-[#023373] text-white text-surface "
         data-twe-ripple-init
         data-twe-ripple-color="light">
         <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -93,7 +117,7 @@ const Footer = () => {
       <a
         href="#!"
         type="button"
-        className="rounded-full bg-white p-3 uppercase leading-normal text-surface shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:bg-neutral-700 dark:text-white"
+        className="rounded-full p-3 uppercase bg-[#023373] text-white text-surface "
         data-twe-ripple-init
         data-twe-ripple-color="light">
         <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
@@ -107,48 +131,10 @@ const Footer = () => {
         </span>
       </a>
     </div>
-    <div>
-      <form action="">
-        <div
-          className="gird-cols-1 grid items-center justify-center gap-4 md:grid-cols-3">
-          <div className="md:mb-6 md:ms-auto">
-            <p>
-              <strong>Sign up for our newsletter</strong>
-            </p>
-          </div>
-          <div className="relative md:mb-6" data-twe-input-wrapper-init>
-            <input
-              type="email"
-              className="peer block min-h-[auto] w-full rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none bg-white"
-              id="exampleFormControlInputEmail"
-              placeholder="Email address" />
-            
-          </div>
+      </div>
 
-          <div className="mb-6 md:me-auto">
-            <button
-              type="submit"
-              className="inline-block rounded px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-surface shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:bg-neutral-700 dark:text-white"
-              data-twe-ripple-init
-              data-twe-ripple-color="light">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-
-    <div className="mb-6">
-      <p className="text-xl text-center font-medium">
-      Connect with us and stay updated on the latest real estate trends, property listings, and exclusive deals. Explore our website now! Unlock your dream home with our expert guidance and personalized service. Let us make your real estate aspirations a reality together.
-      </p>
-    </div>
-
-    <div className="grid md:grid-cols-2 lg:grid-cols-4">
-      <div className="mb-6 flex flex-col">
-        <h5 className="mb-2.5 font-bold text-2xl">UrbanAbodes</h5>
-
-        <ul className="mb-0 list-none">
+      <div className="mb-6 text-center lg:text-right">
+      <ul className="mb-0 list-none text-lg md:text-2xl space-y-3">
           <li>
             <a href="#!">95 South Park Avenue, USA</a>
           </li>
@@ -156,73 +142,16 @@ const Footer = () => {
             <a href="#!">+456 875 369 208</a>
           </li>
           <li>
-            <a href="#!">support@urbanabodes.com</a>
+            <a href="#!">support@SwapItRight.com</a>
           </li>
           
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h5 className="mb-2.5 font-bold uppercase">Agent and Agencies</h5>
-
-        <ul className="mb-0 list-none">
-          <li>
-            <a href="#!">Agency List</a>
-          </li>
-          <li>
-            <a href="#!">Agency Details</a>
-          </li>
-          <li>
-            <a href="#!">Agent List</a>
-          </li>
-          <li>
-            <a href="#!">Agent Details</a>
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h5 className="mb-2.5 font-bold uppercase">The Highlights</h5>
-
-        <ul className="mb-0 list-none">
-          <li>
-            <a href="#!">Apartments</a>
-          </li>
-          <li>
-            <a href="#!">My Houses</a>
-          </li>
-          <li>
-            <a href="#!">Condos</a>
-          </li>
-          <li>
-            <a href="#!">Villas</a>
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h5 className="mb-2.5 font-bold uppercase">Navigations</h5>
-
-        <ul className="mb-0 list-none">
-          <li>
-            <a href="#!">About Us</a>
-          </li>
-          <li>
-            <a href="#!">FAQ</a>
-          </li>
-          <li>
-            <a href="#!">Contact Us</a>
-          </li>
-          <li>
-            <a href="#!">Blog</a>
-          </li>
         </ul>
       </div>
     </div>
   </div>
  <div className="w-full bg-black/5 p-4 text-center">
-    © 2023 Copyright:
-    <a className="font-semibold" href="https://tw-elements.com/"> UrbanAbodes</a>
+    © 2024 Copyright:
+    <a className="font-semibold" href="https://tw-elements.com/"> SwapItRight</a>
   </div>
 </footer>
         </div>

@@ -82,7 +82,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-[#F5EAD8] p-4 md:p-20  rounded-lg border-4">
+    <div className="bg-[#F5EAD8] p-4 md:p-20">
       <Helmet>
         <title>Login</title>
       </Helmet>

@@ -18,9 +18,9 @@ const Reviews = () => {
         fetchData();
       }, []);
     return (
-        <div className="bg-[#F5EAD8]">
+        <div className="bg-[#F5EAD8] py-20">
 
-        <h2 className="pt-20 pb-20 text-6xl text-[#023373] text-center font-lilita">Customer&apos;s Talk</h2>
+        <h2 className=" pb-20 text-6xl text-[#023373] text-center font-lilita">Customer&apos;s Talk</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[85%] mx-auto ">
         {reviewData.map((review)=>(
