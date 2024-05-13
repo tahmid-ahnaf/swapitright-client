@@ -5,6 +5,7 @@ import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import MyQueries from "../Pages/MyQueries/MyQueries";
 
 
 const router = createBrowserRouter([
@@ -25,10 +26,10 @@ const router = createBrowserRouter([
       //     loader: () => fetch('https://b9a10-server-side-tahmid-ahnaf.vercel.app/items')
       // },
 
-  //     {
-  //       path:"/myitems",
-  //       element:<PrivateRoutes><MyItems></MyItems></PrivateRoutes>,
-  //   },
+      {
+        path:"/myqueries",
+        element:<PrivateRoutes><MyQueries></MyQueries></PrivateRoutes>,
+    },
 
   //       {
   //         path:"/additems",

@@ -61,7 +61,7 @@ const Navbar = () => {
           
           </ul>
         </div>
-        <NavLink className="font-bold lg:text-3xl text-2xl" to={"/"}>UrbanAbodes</NavLink>
+        <NavLink className="font-bold lg:text-3xl text-2xl" to={"/"}>SwapItRight</NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="font-sen text-xl menu menu-horizontal px-1">
