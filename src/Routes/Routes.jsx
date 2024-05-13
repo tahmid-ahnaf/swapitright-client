@@ -8,6 +8,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import MyQueries from "../Pages/MyQueries/MyQueries";
 import AddQueries from "../Pages/AddQueries/AddQueries";
 import UpdateQuery from "../Pages/UpdateQuery/UpdateQuery";
+import QueryDetails from "../Pages/QueryDetails/QueryDetails";
 
 
 const router = createBrowserRouter([
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
         {
             path:"/",
             element:<Home></Home>,
-            loader: () => fetch('http://127.0.0.1:5000/queries')
+            loader: () => fetch('https://swapitright-server.vercel.app/queries')
         },
 
       //   {
@@ -41,14 +42,14 @@ const router = createBrowserRouter([
       {
         path:"/updatequery/:id",
         element:<PrivateRoutes><UpdateQuery></UpdateQuery></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://127.0.0.1:5000/queries/${params.id}`)
+        loader: ({params}) => fetch(`https://swapitright-server.vercel.app/queries/${params.id}`)
     },
 
-  //     {
-  //       path:"/view-details/:id",
-  //       element:<PrivateRoutes><ItemDetails></ItemDetails></PrivateRoutes>,
-  //       loader: ({params}) => fetch(`https://b9a10-server-side-tahmid-ahnaf.vercel.app/items/${params.id}`) 
-  //   },
+      {
+        path:"/view-details/:id",
+        element:<PrivateRoutes><QueryDetails></QueryDetails></PrivateRoutes>,
+        loader: ({params}) => fetch(`https://swapitright-server.vercel.app/queries/${params.id}`) 
+    },
 
   //   {
   //     path:"/itemsofsubcategory/:id",

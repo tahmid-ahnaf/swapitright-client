@@ -20,7 +20,6 @@ const AddQueries = () => {
   // Constructing the date and time string
   const dateTimeString = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 
-  console.log(dateTimeString); // Displays date and time in local timezone
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent the default form submit action
 
@@ -47,7 +46,7 @@ const AddQueries = () => {
       recommendationCount,
     };
 
-    fetch("http://127.0.0.1:5000/queries", {
+    fetch("https://swapitright-server.vercel.app/queries", {
       method: "POST",
       headers: {
         "content-type": "application/json",

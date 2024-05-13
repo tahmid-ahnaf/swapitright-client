@@ -73,7 +73,6 @@ const Register = () => {
           photoURL: photoURL,
         })
           .then(() => {
-            console.log("profile updated");
             setUser({ ...result.user, displayName: name, photoURL: photoURL });
             setReload(true);
             // toast.success("User Created Successfully.", {

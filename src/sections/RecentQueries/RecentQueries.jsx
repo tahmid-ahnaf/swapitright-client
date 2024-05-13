@@ -4,7 +4,6 @@ import QueryCard from "../../components/QueryCard/QueryCard"
 const RecentQueries = () => {
 
     const data = useLoaderData();
-    console.log(data);
 
     return (
         <div className='bg-[#F5EAD8]'>

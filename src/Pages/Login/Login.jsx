@@ -23,11 +23,8 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-
-    console.log(email, password);
     loginUser(email, password)
       .then((result) => {
-        console.log(result.user);
         
         setReload(true);
         toast.success("User Logged In Successfully.", {
@@ -40,7 +37,6 @@ const Login = () => {
       })
       .catch((error) => {
         if (error.message === "Firebase: Error (auth/invalid-credential).") {
-          // console.log("invalid email or pass");
           toast.error("Invalid email address or password.", {
             position: "top-right",
           });
@@ -68,7 +64,6 @@ const Login = () => {
   const handleGithubLogIn = () => {
     githubLoginUser()
       .then((result) => {
-        console.log(result.user);
         setReload(true);
         toast.success("User Logged In Successfully.", {
           position: "top-right",

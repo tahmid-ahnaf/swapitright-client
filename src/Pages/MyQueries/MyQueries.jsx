@@ -10,7 +10,7 @@ const MyQueries = () => {
 
         async function fetchData() {
           try {
-            const response = await fetch(`http://127.0.0.1:5000/queriesByEmail/${user.email}`);
+            const response = await fetch(`https://swapitright-server.vercel.app/queriesByEmail/${user.email}`, {credentials:'include'});
             const data = await response.json();
             setMyQueries(data);
           } catch (error) {

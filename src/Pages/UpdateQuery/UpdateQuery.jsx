@@ -24,21 +24,15 @@ const UpdateQuery = () => {
 
   // Convert the timestamp to a Date object
   const date = new Date(DateAndTime);
-
-  // Extracting date and time components
   const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed
+  const month = String(date.getMonth() + 1).padStart(2, "0");
   const day = String(date.getDate()).padStart(2, "0");
   const hours = String(date.getHours()).padStart(2, "0");
   const minutes = String(date.getMinutes()).padStart(2, "0");
   const seconds = String(date.getSeconds()).padStart(2, "0");
-
-  // Constructing the date and time string
-  const dateTimeString = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-
-  console.log(dateTimeString); // Displays date and time in local timezone
+  const dateTimeString = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`; 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submit action
+    e.preventDefault(); 
 
     const productImageURL = e.target.elements.productImageURL.value;
     const productName = e.target.elements.productName.value;
@@ -63,7 +57,7 @@ const UpdateQuery = () => {
       recommendationCount,
     };
 
-    fetch(`http://127.0.0.1:5000/update/${_id}`, {
+    fetch(`https://swapitright-server.vercel.app/update/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

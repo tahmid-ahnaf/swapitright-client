@@ -24,7 +24,6 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
     recommendationCount,
   } = query;
   const date = new Date(parseInt(currentDateAndTime));
-  console.log(currentDateAndTime);
 
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -46,7 +45,7 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://127.0.0.1:5000/queries/${id}`, {
+        fetch(`https://swapitright-server.vercel.app/queries/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
