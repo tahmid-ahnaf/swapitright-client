@@ -5,7 +5,7 @@ const Footer = () => {
   className="flex flex-col items-center text-center text-surface">
   <div className="max-w-[85%] mx-auto px-6 pt-6">
 
-    <div className="mb-6 grid md:grid-cols-3 mt-12 items-center justify-center gap-x-40">
+    <div className="mb-6 grid lg:grid-cols-3 mt-12 items-center justify-center gap-x-40">
 
       <div className="mb-6">
         <h5 className="mb-4 font-bold text-3xl uppercase">Quick Links</h5>
@@ -23,7 +23,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className="mb-6 md:mb-0 flex flex-col gap-4">
+      <div className="mb-6 lg:mb-0 flex flex-col gap-4 items-center">
         <h2 className="font-bold font-lilita text-5xl text-[#023373]">SwapItRight</h2>  
 
         <p className="">Follow Us On:</p>
