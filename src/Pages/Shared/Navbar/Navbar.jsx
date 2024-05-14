@@ -46,9 +46,7 @@ const Navbar = () => {
               <NavLink to={"/queries"}>Queries</NavLink>
             </li>
 
-            <li>
-              <NavLink to={"/agents"}>Agents</NavLink>
-            </li>
+            
 
             {
               user && (reload || user.photoURL) ? 

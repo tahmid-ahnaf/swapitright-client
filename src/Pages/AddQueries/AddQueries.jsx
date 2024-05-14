@@ -58,7 +58,7 @@ const AddQueries = () => {
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
-            text: "Item Added Successfully",
+            text: "Query Added Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });

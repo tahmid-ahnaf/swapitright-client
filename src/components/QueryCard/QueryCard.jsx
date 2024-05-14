@@ -95,7 +95,11 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
             {dateTimeString}
           </p>
           <p className="flex items-center gap-2">
-            <FaRegUser className="text-2xl"></FaRegUser>
+            {/* <FaRegUser className="text-2xl"></FaRegUser> */}
+            <div className="w-10 h-10 rounded-full">
+            <img src={userImage} alt="" />
+            </div>
+            
             {userName}
           </p>
           <div className="mt-4 card-actions justify-center md:justify-start">
