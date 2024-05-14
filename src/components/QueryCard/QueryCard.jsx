@@ -53,7 +53,7 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
             if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",
-                text: "Your art item has been deleted.",
+                text: "Your query has been deleted.",
                 icon: "success",
               });
 
