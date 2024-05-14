@@ -75,7 +75,7 @@ const QueryDetails = () => {
             confirmButtonText: "Cool",
           });
 
-          e.target.reset();
+          // e.target.reset();
         }
       });
   };
