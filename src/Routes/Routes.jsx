@@ -47,8 +47,7 @@ const router = createBrowserRouter([
 
       {
         path:"/view-details/:id",
-        element:<PrivateRoutes><QueryDetails></QueryDetails></PrivateRoutes>,
-        loader: ({params}) => fetch(`https://swapitright-server.vercel.app/queries/${params.id}`) 
+        element:<PrivateRoutes><QueryDetails></QueryDetails></PrivateRoutes>, 
     },
 
   //   {

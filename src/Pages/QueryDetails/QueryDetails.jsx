@@ -1,11 +1,32 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import RecommendationComment from "../../components/RecommendationComment/RecommendationComment";
 
 const QueryDetails = () => {
     const { user } = useContext(AuthContext);
-  const data = useLoaderData();
+    const [recommendations, setRecommendations] = useState([]);
+    const [query, setQuery] = useState([]);
+    const [count, setCount] = useState(false);
+    const {id} = useParams();
+
+  
+
+  useEffect(() => {
+
+    async function fetchData() {
+      try {
+        const response = await fetch(`https://swapitright-server.vercel.app/queries/${id}`);
+        const data = await response.json();
+        setQuery(data);
+      } catch (error) {
+        console.error("Could not fetch data", error);
+      }
+    }
+
+    fetchData();
+  }, [count]);
 
   const {
     _id,
@@ -19,7 +40,25 @@ const QueryDetails = () => {
     userName,
     recommendationCount,
     currentDateAndTime,
-  } = data;
+  } = query;
+
+  useEffect(() => {
+
+    async function fetchData() {
+      try {
+        const response = await fetch(`https://swapitright-server.vercel.app/recommendations/${_id}`);
+        const data = await response.json();
+        setRecommendations(data);
+      } catch (error) {
+        console.error("Could not fetch data", error);
+      }
+    }
+
+    fetchData();
+  }, [_id,count]);
+
+  
+
   const date = new Date(parseInt(currentDateAndTime));
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -38,6 +77,7 @@ const QueryDetails = () => {
     const recommendationReason = e.target.elements.recommendationReason.value;
     const recommenderEmail = user.email;
     const recommenderName = user.displayName;
+    const recommenderImage = user.photoURL;
     const DateAndTime = Date.now();
     const currentDateAndTimeStamp = ''+DateAndTime;
     const queryId = _id;
@@ -55,6 +95,7 @@ const QueryDetails = () => {
       userName,
       recommenderEmail,
       recommenderName,
+      recommenderImage,
       currentDateAndTimeStamp,
     };
 
@@ -76,6 +117,7 @@ const QueryDetails = () => {
           });
 
           // e.target.reset();
+          setCount(!count);
         }
       });
   };
@@ -160,6 +202,15 @@ const QueryDetails = () => {
           </div>
         </form>
       </div>}
+
+      <div className="mt-8 w-[85%] mx-auto">
+      <h2 className="text-4xl text-center text-[#023373] font-lilita mb-6">All Recommendations</h2>
+      {
+        recommendations.map((rcmnd)=>(
+          <RecommendationComment rcmnd={rcmnd} key={rcmnd._id}></RecommendationComment>
+        ))
+      }
+      </div>
     </div>
   );
 };
