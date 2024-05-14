@@ -129,7 +129,7 @@ const QueryDetails = () => {
 
       <div className="w-[85%] mx-auto">
         <div className="rounded-xl bg-[#EBD4AE] p-8 grid grid-cols-1 lg:grid-cols-2 ">
-        <div className="flex flex-col gap-2 justify-center items-center lg:items-start text-center lg:text-start">
+        <div className="flex flex-col gap-2 justify-center items-center lg:items-start text-center lg:text-start mb-8 lg: mb-0">
         <p className="text-xl text-[#023373]"><span className="font-lilita">Product Name: </span>{productName}</p>
             <p className="text-xl text-[#023373]"><span className="font-lilita">Brand Name: </span>{productBrand}</p>
             <p className="text-xl text-[#023373]"><span className="font-lilita">Title of the Query: </span>{queryTitle}</p>
