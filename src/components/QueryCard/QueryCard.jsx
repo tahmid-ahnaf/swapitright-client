@@ -66,12 +66,12 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
   };
   return (
     <div>
-      <div className="card h-min md:h-[400px] md:card-side bg-[#EBD4AE]  shadow-xl">
-        <figure className="w-[50%]">
+      <div className="card h-min md:h-[650px] lg:card-side bg-[#EBD4AE]  shadow-xl">
+        <figure className="">
           <img
             src={productImageURL}
             alt="Album"
-            className="bg-contain w-full h-[200px] md:h-full"
+            className="bg-contain w-full h-[200px]"
           />
         </figure>
         <div className="card-body text-xl text-[#023373] font-medium">
