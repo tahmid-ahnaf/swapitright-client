@@ -94,6 +94,10 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
             <FaRegCalendarAlt className="text-2xl"></FaRegCalendarAlt>
             {dateTimeString}
           </p>
+
+          <p className="flex items-center gap-2">
+            Total Recommendations: { recommendationCount}
+          </p>
           <p className="flex items-center gap-2">
             {/* <FaRegUser className="text-2xl"></FaRegUser> */}
             <div className="w-10 h-10 rounded-full">
@@ -138,6 +142,20 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
               } 
               else if(from==="home") {
                 return "";
+              }
+              else if(from==="allqueries")
+              {
+                return (
+                  <div className="flex items-center justify-center md:gap-2 gap-4" >
+                    <Link to={`/view-details/${_id}`}>
+                      <button className="hidden md:flex btn bg-transparent border-[#023373] text-[#023373] hover:bg-[#023373] hover:text-white text-base">
+                        Recommend
+                      </button>
+
+                      <p className="md:hidden text-4xl"><MdPreview></MdPreview></p>
+                    </Link>
+                    </div>
+                )
               }
             })()}
           </div>

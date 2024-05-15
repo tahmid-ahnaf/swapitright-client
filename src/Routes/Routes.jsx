@@ -11,6 +11,7 @@ import UpdateQuery from "../Pages/UpdateQuery/UpdateQuery";
 import QueryDetails from "../Pages/QueryDetails/QueryDetails";
 import MyRecommendations from "../Pages/MyRecommendations/MyRecommendations";
 import RecommendationForMe from "../Pages/RecommendationsForMe/RecommendationForMe";
+import AllQueries from "../Pages/AllQueries/AllQueries";
 
 
 const router = createBrowserRouter([
@@ -25,11 +26,10 @@ const router = createBrowserRouter([
             loader: () => fetch('https://swapitright-server.vercel.app/queries')
         },
 
-      //   {
-      //     path:"/allitems",
-      //     element:<AllItems></AllItems>,
-      //     loader: () => fetch('https://b9a10-server-side-tahmid-ahnaf.vercel.app/items')
-      // },
+        {
+          path:"/allqueries",
+          element:<AllQueries></AllQueries>,
+      },
 
       {
         path:"/myqueries",
@@ -60,12 +60,6 @@ const router = createBrowserRouter([
         path:"/view-details/:id",
         element:<PrivateRoutes><QueryDetails></QueryDetails></PrivateRoutes>, 
     },
-
-  //   {
-  //     path:"/itemsofsubcategory/:id",
-  //     element:<ItemofCategory></ItemofCategory>,
-  //     loader: ({params}) => fetch(`https://b9a10-server-side-tahmid-ahnaf.vercel.app/itemsBySubcategory/${params.id}`) 
-  // },
 
         {
           path:"/register",

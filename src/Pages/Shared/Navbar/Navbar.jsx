@@ -43,7 +43,7 @@ const Navbar = () => {
               <NavLink to={"/"}>Home</NavLink>
             </li>
             <li>
-              <NavLink to={"/queries"}>Queries</NavLink>
+              <NavLink to={"/allqueries"}>Queries</NavLink>
             </li>
 
             {user && (reload || user.photoURL) ? <li><NavLink to={"/recommendationsforme"}>Recommendations For Me</NavLink></li> : ""}
@@ -73,7 +73,7 @@ const Navbar = () => {
               <NavLink to={"/"}>Home</NavLink>
         </li>
         <li>
-        <NavLink to={"/queries"}>Queries</NavLink>
+        <NavLink to={"/allqueries"}>Queries</NavLink>
         </li>
         {user && (reload || user.photoURL) ? <li><NavLink to={"/recommendationsforme"}>Recommendations For Me</NavLink></li> : ""}
 
