@@ -2,6 +2,8 @@
 
 This website serves as an interactive platform where users can inquire about potential alternatives for various products. It facilitates a community-driven approach by allowing users to respond to these queries with alternative recommendations. The site incorporates secure login options via Google and GitHub, ensuring ease of access and data protection. Users have control over their contributions, with capabilities to view, update, or delete their queries and recommendations. The use of JWT token authentication ensures a secure and personalized user experience.
 
+## Selected Category : Alternative Product (ID 009)
+
 ## Features and Characteristics:
 
 - **Community-Driven Recommendations:** Users can ask for and suggest alternatives to products, fostering a resourceful community environment.
