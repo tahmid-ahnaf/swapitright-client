@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyRecommendations = () => {
     const [myRecommendations, setMyRecommendations] = useState([]);
@@ -55,6 +56,9 @@ const MyRecommendations = () => {
   };
   return (
     <div className=" p-8 lg:p-16 bg-[#FFF4E4]">
+    <Helmet>
+                <title>My Recommendations</title>
+            </Helmet>
         <div className=" max-w-[85%] mx-auto">
     <h2 className="text-center text-4xl mb-6 font-lilita text-[#023373]">My Recommendations</h2>
       <div className="overflow-x-auto bg-[#FAE8D3] rounded-lg p-4">

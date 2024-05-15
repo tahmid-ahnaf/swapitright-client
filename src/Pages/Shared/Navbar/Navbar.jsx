@@ -46,6 +46,12 @@ const Navbar = () => {
               <NavLink to={"/queries"}>Queries</NavLink>
             </li>
 
+            {user && (reload || user.photoURL) ? <li><NavLink to={"/recommendationsforme"}>Recommendations For Me</NavLink></li> : ""}
+
+        {user && (reload || user.photoURL) ? <li><NavLink to={"/myqueries"}>My Queries</NavLink></li> : ""}
+
+        {user && (reload || user.photoURL) ? <li><NavLink to={"/myrecommendations"}>My Recommendations</NavLink></li> : ""}
+
             
 
             {

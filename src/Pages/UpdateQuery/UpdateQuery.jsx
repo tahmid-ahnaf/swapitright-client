@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const UpdateQuery = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -79,6 +80,9 @@ const UpdateQuery = () => {
   };
   return (
     <div className="mx-auto bg-[#FFF4E4] p-4 lg:p-8 rounded-lg">
+    <Helmet>
+                <title>Update Query</title>
+            </Helmet>
       <div className="w-[95%] md:w-[50%] bg-[#EBD4AE] mx-auto p-4 lg:px-12 lg:py-10 rounded-lg">
         <form onSubmit={handleSubmit}>
           <h2 className="font-semibold text-4xl text-center mb-4 text-[#023373] font-lilita">

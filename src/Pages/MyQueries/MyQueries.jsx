@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import QueryCard from "../../components/QueryCard/QueryCard";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const MyQueries = () => {
     const [myQueries, setMyQueries] = useState([]);
@@ -22,14 +23,15 @@ const MyQueries = () => {
       }, []);
   return (
     <div className="bg-[#F5EAD8] pt-6">
+    <Helmet>
+                <title>My Queries</title>
+            </Helmet>
       <div className="hero h-[75vh] rounded-xl mb-6 bg-[#EBD4AE] max-w-[85%] mx-auto">
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">Hello there</h1>
             <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Without further ado, let us get you to your needed query. Click the button below to add a query about the alternative product you need.
             </p>
             <Link to={`/addqueries`}>
                       <button className="btn bg-transparent border-[#023373] text-[#023373] hover:bg-[#023373] hover:text-white text-base">

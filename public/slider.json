@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "functionality": "Alternative Product Query",
+      
+      "description": "You can ask queries about the possible alternatives of a product.",
+      "photoURL": "https://i.ibb.co/Mf8YsKB/towfiqu-barbhuiya-o-Zu-BNC-6-E2s-unsplash.jpg"
+    },
+    {
+        "id": 2,
+        "functionality": "Alternative Product Recommendations",
+        
+        "description": "You can recommend alternative products to the queries. ",
+        "photoURL": "https://i.ibb.co/RHB9F7s/kelly-sikkema-1-RZL8-BGBM-unsplash.jpg"
+      }
+
+      
+
+    
+]

@@ -3,6 +3,7 @@ import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import RecommendationComment from "../../components/RecommendationComment/RecommendationComment";
+import { Helmet } from "react-helmet-async";
 
 const QueryDetails = () => {
     const { user } = useContext(AuthContext);
@@ -123,6 +124,9 @@ const QueryDetails = () => {
   };
   return (
     <div className="mx-auto bg-[#FFF4E4] p-4 lg:p-8 rounded-lg">
+    <Helmet>
+                <title>Query Details</title>
+            </Helmet>
       <div className="w-[85%] border-[#EBD4AE] mx-auto mb-6">
         <img src={productImageURL} className="mx-auto w-[500px] h-[350px]" alt="" />
       </div>
