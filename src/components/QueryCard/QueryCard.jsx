@@ -11,7 +11,8 @@ import { MdOutlineModeEdit } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
 import Vote from "../Vote/Vote";
 import { useState } from "react";
-const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
+import axios from 'axios';
+const QueryCard = ({ query, from, myQueries,setMyQueries,setVoteChange,voteChange }) => {
   const {
     _id,
     productName,
@@ -24,6 +25,7 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
     userImage,
     currentDateAndTime,
     recommendationCount,
+    voteCount
   } = query;
 
   const [voteToggle,setVoteToggle] = useState(true); 
@@ -69,12 +71,21 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
     });
   };
 
-  const handleVote = ()=> {
+  const handleVote = async ()=> {
+    try {
+      const response = await axios.put(`https://swapitright-server.vercel.app/queries/${_id}/vote`);
+      console.log(response.data);
+      setVoteChange(!voteChange);
+    } catch (error) {
+      console.error(error);
+    }
+    // navigate("/myqueries");
     setVoteToggle(!voteToggle);
-  }
+  };
+    
   return (
     <div>
-      <div className="flex flex-col lg:flex-row h-min md:h-[600px] lg:h-[400px] bg-[#EBD4AE] shadow-xl rounded-xl">
+      <div className="flex flex-col lg:flex-row h-min md:h-[600px] lg:h-[600px] bg-[#EBD4AE] shadow-xl rounded-xl">
         <figure className="lg:w-[500px] rounded-xl">
           <img
             src={productImageURL}
@@ -105,6 +116,10 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
 
           <p className="flex items-center gap-2">
             Total Recommendations: { recommendationCount}
+          </p>
+
+          <p className="flex items-center gap-2">
+            Total Votes: { voteCount}
           </p>
           <p className="flex items-center gap-2">
             {/* <FaRegUser className="text-2xl"></FaRegUser> */}
