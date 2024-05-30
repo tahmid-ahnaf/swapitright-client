@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
-        <div className=" bg-[#F5EAD8] p-8  ">
-            <div className="hero h-[75vh] bg-[#EBD4AE] mx-auto max-w-[85%] rounded-xl  ">
+        <div className=" bg-[#F5EAD8] p-4 md:p-8  ">
+            <div className="hero h-[75vh] bg-[#EBD4AE] mx-auto max-w-[95%] rounded-xl mt-8 ">
   <div className="hero-content text-center">
     <div className="max-w-md">
       <h1 className="text-5xl font-bold">Hello there</h1>

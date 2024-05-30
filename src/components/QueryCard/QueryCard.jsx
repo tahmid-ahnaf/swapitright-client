@@ -9,6 +9,8 @@ import Swal from "sweetalert2";
 import { MdPreview } from "react-icons/md";
 import { MdOutlineModeEdit } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
+import Vote from "../Vote/Vote";
+import { useState } from "react";
 const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
   const {
     _id,
@@ -23,6 +25,8 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
     currentDateAndTime,
     recommendationCount,
   } = query;
+
+  const [voteToggle,setVoteToggle] = useState(true); 
   const date = new Date(parseInt(currentDateAndTime));
 
   const year = date.getFullYear();
@@ -64,14 +68,18 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
       }
     });
   };
+
+  const handleVote = ()=> {
+    setVoteToggle(!voteToggle);
+  }
   return (
     <div>
-      <div className="card h-min md:h-[650px] lg:card-side bg-[#EBD4AE]  shadow-xl">
-        <figure className="">
+      <div className="flex flex-col lg:flex-row h-min md:h-[600px] lg:h-[400px] bg-[#EBD4AE] shadow-xl rounded-xl">
+        <figure className="lg:w-[500px] rounded-xl">
           <img
             src={productImageURL}
             alt="Album"
-            className="bg-contain w-full h-[200px]"
+            className="bg-contain w-full h-[200px] lg:h-full"
           />
         </figure>
         <div className="card-body text-xl text-[#023373] font-medium">
@@ -151,9 +159,11 @@ const QueryCard = ({ query, from, myQueries,setMyQueries }) => {
                       <button className="hidden md:flex btn bg-transparent border-[#023373] text-[#023373] hover:bg-[#023373] hover:text-white text-base">
                         Recommend
                       </button>
+                      
 
                       <p className="md:hidden text-4xl"><MdPreview></MdPreview></p>
                     </Link>
+                    <Vote handleVote={handleVote} toggled={voteToggle} ></Vote>
                     </div>
                 )
               }

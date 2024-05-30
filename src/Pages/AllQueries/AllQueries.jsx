@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import QueryCard from "../../components/QueryCard/QueryCard";
+import Vote from "../../components/Vote/Vote";
 
 const AllQueries = () => {
     const [queries, setQueries] = useState([]);
@@ -46,7 +47,8 @@ const AllQueries = () => {
           <div className="flex justify-center">
           <button type="submit" className="btn bg-transparent border-[#023373] text-[#023373] hover:bg-[#023373] hover:text-white text-base">
                         Search
-                      </button>
+          </button>
+          
           </div>
       </form>
 

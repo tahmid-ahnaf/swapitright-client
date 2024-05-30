@@ -8,7 +8,7 @@ const RecentQueries = () => {
     return (
         <div className='bg-[#F5EAD8]'>
 
-        <h2 className="pt-20 pb-20 text-6xl text-[#023373] text-center font-lilita font-bold">
+        <h2 className="pt-8 pb-20 text-4xl md:text-6xl text-[#023373] text-center font-lilita font-bold">
             Recent Queries
         </h2>
 
